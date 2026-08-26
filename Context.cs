@@ -131,19 +131,27 @@ namespace SpotifyAdMuter
         {
             return !SpotifyWindowName.Contains(" - ");
         }
+        private const int NotifyIconTextMaxLength = 127;
         private void ToggleMute()
         {
             _spotifyMuter?.SetMute(_isMuted ^= true);
             if (_isMuted)
             {
-                _notifyIcon.Text = $"muted \"{SpotifyWindowName}\"";
+                _notifyIcon.Text = ToSafeNotifyIconText($"muted \"{SpotifyWindowName}\"");
                 _notifyIcon.Icon = Resources.MutedIcon;
             }
             else
             {
-                _notifyIcon.Text = $"unmuted \"{SpotifyWindowName}\"";
+                _notifyIcon.Text = ToSafeNotifyIconText($"unmuted \"{SpotifyWindowName}\"");
                 _notifyIcon.Icon = Resources.UnmutedIcon;
             }
+
+        }
+        private static string ToSafeNotifyIconText(string text)
+        {
+            if (text == null) return string.Empty;
+            if (text.Length <= NotifyIconTextMaxLength) return text;
+            return text.Substring(0, NotifyIconTextMaxLength);
         }
         void Exit(object? sender, EventArgs e)
         {
