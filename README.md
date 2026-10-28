@@ -1,6 +1,4 @@
-# [download link](https://github.com/epicnyanpandi/SpotifyAdMuter/releases/download/v1.2/SpotifyAdMuter.zip)
-
-\* i realize that Windows Defender flags it. it's not a virus. that being said, i take no responsibility if anything bad happens.
+# [download link](https://github.com/tonyfcw1/SpotifyAdMuter/releases/download/1.2.1/SpotifyAdMuter.zip)
 
 # SpotifyAdMuter
 lightweight app that mutes the Spotify app on Windows when there are advertisements
@@ -17,7 +15,6 @@ lightweight app that mutes the Spotify app on Windows when there are advertiseme
 - if the ads aren't being muted and the button doesn't do anything, restart SAM. this probably has something to do with whether you opened SAM before or after opening Spotify.
 - if the ads aren't being auto-muted but clicking the button still works, contact me.
 - sometimes, Spotify will play video ads. SAM does not detect these ads and is unable to mute them. i've noticed that video ads only happen when i'm on the Spotify app, so if you spend long periods of time browsing Spotify then SAM may not be as useful to you. i might fix this in the future.
-- ~~in the future, i want to make SAM minimize to tray so that it doesn't add window clutter.~~ done as of v1.2
 
 
 ### inspiration/sources
